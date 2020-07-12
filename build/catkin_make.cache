@@ -1,0 +1,2 @@
+basics
+-DCATKIN_DEVEL_PREFIX=/home/teja/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/teja/catkin_ws/install -G Unix Makefiles
