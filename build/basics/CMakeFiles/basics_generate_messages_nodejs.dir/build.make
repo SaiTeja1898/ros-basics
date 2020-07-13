@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/teja/catkin_ws/build
 include basics/CMakeFiles/basics_generate_messages_nodejs.dir/progress.make
 
 basics/CMakeFiles/basics_generate_messages_nodejs: /home/teja/catkin_ws/devel/share/gennodejs/ros/basics/msg/Complex.js
+basics/CMakeFiles/basics_generate_messages_nodejs: /home/teja/catkin_ws/devel/share/gennodejs/ros/basics/srv/WordCount.js
 
 
 /home/teja/catkin_ws/devel/share/gennodejs/ros/basics/msg/Complex.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +62,14 @@ basics/CMakeFiles/basics_generate_messages_nodejs: /home/teja/catkin_ws/devel/sh
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/teja/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from basics/Complex.msg"
 	cd /home/teja/catkin_ws/build/basics && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/teja/catkin_ws/src/basics/msg/Complex.msg -Ibasics:/home/teja/catkin_ws/src/basics/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p basics -o /home/teja/catkin_ws/devel/share/gennodejs/ros/basics/msg
 
+/home/teja/catkin_ws/devel/share/gennodejs/ros/basics/srv/WordCount.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/teja/catkin_ws/devel/share/gennodejs/ros/basics/srv/WordCount.js: /home/teja/catkin_ws/src/basics/srv/WordCount.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/teja/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from basics/WordCount.srv"
+	cd /home/teja/catkin_ws/build/basics && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/teja/catkin_ws/src/basics/srv/WordCount.srv -Ibasics:/home/teja/catkin_ws/src/basics/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p basics -o /home/teja/catkin_ws/devel/share/gennodejs/ros/basics/srv
+
 basics_generate_messages_nodejs: basics/CMakeFiles/basics_generate_messages_nodejs
 basics_generate_messages_nodejs: /home/teja/catkin_ws/devel/share/gennodejs/ros/basics/msg/Complex.js
+basics_generate_messages_nodejs: /home/teja/catkin_ws/devel/share/gennodejs/ros/basics/srv/WordCount.js
 basics_generate_messages_nodejs: basics/CMakeFiles/basics_generate_messages_nodejs.dir/build.make
 
 .PHONY : basics_generate_messages_nodejs

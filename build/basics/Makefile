@@ -78,17 +78,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -99,6 +88,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -166,21 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-basics/CMakeFiles/basics_generate_messages_eus.dir/rule:
-	cd /home/teja/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basics/CMakeFiles/basics_generate_messages_eus.dir/rule
-.PHONY : basics/CMakeFiles/basics_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-basics_generate_messages_eus: basics/CMakeFiles/basics_generate_messages_eus.dir/rule
-
-.PHONY : basics_generate_messages_eus
-
-# fast build rule for target.
-basics_generate_messages_eus/fast:
-	cd /home/teja/catkin_ws/build && $(MAKE) -f basics/CMakeFiles/basics_generate_messages_eus.dir/build.make basics/CMakeFiles/basics_generate_messages_eus.dir/build
-.PHONY : basics_generate_messages_eus/fast
-
-# Convenience name for target.
 basics/CMakeFiles/_basics_generate_messages_check_deps_Complex.dir/rule:
 	cd /home/teja/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basics/CMakeFiles/_basics_generate_messages_check_deps_Complex.dir/rule
 .PHONY : basics/CMakeFiles/_basics_generate_messages_check_deps_Complex.dir/rule
@@ -194,6 +179,36 @@ _basics_generate_messages_check_deps_Complex: basics/CMakeFiles/_basics_generate
 _basics_generate_messages_check_deps_Complex/fast:
 	cd /home/teja/catkin_ws/build && $(MAKE) -f basics/CMakeFiles/_basics_generate_messages_check_deps_Complex.dir/build.make basics/CMakeFiles/_basics_generate_messages_check_deps_Complex.dir/build
 .PHONY : _basics_generate_messages_check_deps_Complex/fast
+
+# Convenience name for target.
+basics/CMakeFiles/_basics_generate_messages_check_deps_WordCount.dir/rule:
+	cd /home/teja/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basics/CMakeFiles/_basics_generate_messages_check_deps_WordCount.dir/rule
+.PHONY : basics/CMakeFiles/_basics_generate_messages_check_deps_WordCount.dir/rule
+
+# Convenience name for target.
+_basics_generate_messages_check_deps_WordCount: basics/CMakeFiles/_basics_generate_messages_check_deps_WordCount.dir/rule
+
+.PHONY : _basics_generate_messages_check_deps_WordCount
+
+# fast build rule for target.
+_basics_generate_messages_check_deps_WordCount/fast:
+	cd /home/teja/catkin_ws/build && $(MAKE) -f basics/CMakeFiles/_basics_generate_messages_check_deps_WordCount.dir/build.make basics/CMakeFiles/_basics_generate_messages_check_deps_WordCount.dir/build
+.PHONY : _basics_generate_messages_check_deps_WordCount/fast
+
+# Convenience name for target.
+basics/CMakeFiles/basics_generate_messages_eus.dir/rule:
+	cd /home/teja/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 basics/CMakeFiles/basics_generate_messages_eus.dir/rule
+.PHONY : basics/CMakeFiles/basics_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+basics_generate_messages_eus: basics/CMakeFiles/basics_generate_messages_eus.dir/rule
+
+.PHONY : basics_generate_messages_eus
+
+# fast build rule for target.
+basics_generate_messages_eus/fast:
+	cd /home/teja/catkin_ws/build && $(MAKE) -f basics/CMakeFiles/basics_generate_messages_eus.dir/build.make basics/CMakeFiles/basics_generate_messages_eus.dir/build
+.PHONY : basics_generate_messages_eus/fast
 
 # Convenience name for target.
 basics/CMakeFiles/basics_generate_messages.dir/rule:
@@ -428,10 +443,11 @@ help:
 	@echo "... depend"
 	@echo "... list_install_components"
 	@echo "... install"
+	@echo "... rebuild_cache"
+	@echo "... _basics_generate_messages_check_deps_Complex"
+	@echo "... _basics_generate_messages_check_deps_WordCount"
 	@echo "... basics_generate_messages_eus"
 	@echo "... test"
-	@echo "... _basics_generate_messages_check_deps_Complex"
-	@echo "... rebuild_cache"
 	@echo "... basics_generate_messages"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_eus"

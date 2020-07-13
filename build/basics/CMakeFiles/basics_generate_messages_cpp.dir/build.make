@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/teja/catkin_ws/build
 include basics/CMakeFiles/basics_generate_messages_cpp.dir/progress.make
 
 basics/CMakeFiles/basics_generate_messages_cpp: /home/teja/catkin_ws/devel/include/basics/Complex.h
+basics/CMakeFiles/basics_generate_messages_cpp: /home/teja/catkin_ws/devel/include/basics/WordCount.h
 
 
 /home/teja/catkin_ws/devel/include/basics/Complex.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
@@ -62,8 +63,16 @@ basics/CMakeFiles/basics_generate_messages_cpp: /home/teja/catkin_ws/devel/inclu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/teja/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from basics/Complex.msg"
 	cd /home/teja/catkin_ws/src/basics && /home/teja/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/teja/catkin_ws/src/basics/msg/Complex.msg -Ibasics:/home/teja/catkin_ws/src/basics/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p basics -o /home/teja/catkin_ws/devel/include/basics -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+/home/teja/catkin_ws/devel/include/basics/WordCount.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/teja/catkin_ws/devel/include/basics/WordCount.h: /home/teja/catkin_ws/src/basics/srv/WordCount.srv
+/home/teja/catkin_ws/devel/include/basics/WordCount.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/teja/catkin_ws/devel/include/basics/WordCount.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/teja/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from basics/WordCount.srv"
+	cd /home/teja/catkin_ws/src/basics && /home/teja/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/teja/catkin_ws/src/basics/srv/WordCount.srv -Ibasics:/home/teja/catkin_ws/src/basics/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p basics -o /home/teja/catkin_ws/devel/include/basics -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 basics_generate_messages_cpp: basics/CMakeFiles/basics_generate_messages_cpp
 basics_generate_messages_cpp: /home/teja/catkin_ws/devel/include/basics/Complex.h
+basics_generate_messages_cpp: /home/teja/catkin_ws/devel/include/basics/WordCount.h
 basics_generate_messages_cpp: basics/CMakeFiles/basics_generate_messages_cpp.dir/build.make
 
 .PHONY : basics_generate_messages_cpp

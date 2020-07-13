@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/basics_generate_messages_lisp"
   "/home/teja/catkin_ws/devel/share/common-lisp/ros/basics/msg/Complex.lisp"
+  "/home/teja/catkin_ws/devel/share/common-lisp/ros/basics/srv/WordCount.lisp"
 )
 
 # Per-language clean rules from dependency scanning.
