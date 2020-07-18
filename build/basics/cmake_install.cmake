@@ -41,6 +41,22 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/basics/action" TYPE FILE FILES "/home/teja/catkin_ws/src/basics/action/Timer.action")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/basics/msg" TYPE FILE FILES
+    "/home/teja/catkin_ws/devel/share/basics/msg/TimerAction.msg"
+    "/home/teja/catkin_ws/devel/share/basics/msg/TimerActionGoal.msg"
+    "/home/teja/catkin_ws/devel/share/basics/msg/TimerActionResult.msg"
+    "/home/teja/catkin_ws/devel/share/basics/msg/TimerActionFeedback.msg"
+    "/home/teja/catkin_ws/devel/share/basics/msg/TimerGoal.msg"
+    "/home/teja/catkin_ws/devel/share/basics/msg/TimerResult.msg"
+    "/home/teja/catkin_ws/devel/share/basics/msg/TimerFeedback.msg"
+    )
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/basics/cmake" TYPE FILE FILES "/home/teja/catkin_ws/build/basics/catkin_generated/installspace/basics-msg-paths.cmake")
 endif()
 
